@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    background-color: #F2EDE6;
+    display: grid;
+    grid-template-columns: auto auto auto;  
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sidebar booklist addBook";
+    align-items: center;
+}
+
+
+.sidebar {
+    // float: left;
+    // writing-mode: vertical-lr;
+    // text-orientation: sideways;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    color: #0D054C;
+    transform: rotate(-90deg);
+    position: relative;
+    top: 50%;
+}
+
+.booklist {
+
+
+    &__image {
+        width: 75px;
+        height: 100px;
+    }
+
+
+}
+
+
+
+.addBook {
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    padding: 75px;
+
+
+    &__input {
+        border: none;
+        height: 40px;
+        width: 250px;
+        border-bottom: 2px solid #0D054C;
+        padding: 0;
+        background-color: #F2EDE6;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+
+        &::placeholder {
+            padding-bottom: 4px;
+            font-size: 12px;
+            background-color: #F2EDE6;
+        }
+    }
+
+    &__button {
+        margin-top: 20px;
+        height: 40px;
+        width: 200px;
+        color: white;
+        background-color: #0D054C;
+        border-radius: 20px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+  
+}
+
