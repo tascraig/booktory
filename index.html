@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booktory</title>
     <link rel="stylesheet" href="styles/style.css">
+    
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -11,17 +13,21 @@
         <h1 class="sidebar__header">Booktory</h1>
     </div>
     <div class="booklist">
-        <ul class="booklist">
-            <li class="booklist__book"></li>
+        <ul class="booklist__items">
+            <li class="booklist__book">
                 <img class="booklist__image" src="assets/Atlasoftheheart.jpg" alt="atlas of the heart book cover">
-                <p class="booklist__book title">Atlas Of The Heart</p>
-                <p class="booklist__book author">Brene Brown</p>
-            
+                <div class="booklist__details">
+                    <p class="booklist__book title">Atlas Of The Heart</p>
+                    <p class="booklist__book author">Brene Brown</p>
+                    <p class="booklist__book stock">In Stock</p>
+                    <p class="booklist__book price">$18.99</p>
+                </div>
+                <div class="booklist__actions">
+                    <p class="booklist__book garbage">🗑️</p>
+                </div>
             </li>
-
         </ul>
-
-    </div>
+    </div>    
     <div class="addBook">
         <form action="submit" class="addBook__form">
            

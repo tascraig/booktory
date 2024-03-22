@@ -19,18 +19,48 @@ body, html {
   transform: rotate(-90deg);
   position: relative;
   top: 50%;
+  grid-area: sidebar;
+}
+
+.booklist {
+  list-style-type: none;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, auto);
+  align-items: start;
+  grid-area: booklist;
+}
+
+.booklist__book {
+  display: flex;
+  align-items: center;
 }
 
 .booklist__image {
   width: 75px;
   height: 100px;
+  margin-right: 0;
+}
+
+.booklist__details {
+  margin-left: 15px;
+}
+
+.booklist__details p {
+  margin: 0;
+}
+
+.booklist__garbage {
+  cursor: pointer;
+  margin-right: 0;
 }
 
 .addBook {
+  padding: 75px;
+  grid-area: addBook;
   justify-content: center;
   position: relative;
   top: 50%;
-  padding: 75px;
 }
 .addBook__input {
   border: none;
