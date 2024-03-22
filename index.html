@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booktory</title>
-    <link rel="stylesheet" href="styles/style.css">
-    
+    <link rel="stylesheet" href="styles/style.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
-    <div class="sidebar">
-        <h1 class="sidebar__header">Booktory</h1>
+  </head>
+  <body>
+    <div class="bookinventory">
+      <aside class="bookinventory__sidebar">
+        <h1 class="bookinventory__sidebar-text">Booktory</h1>
+      </aside>
+
+      <ul class="bookinventory__booklist">
+        <img
+          class="bookinventory__booklist__image"
+          src="assets/Atlasoftheheart.jpg"
+          alt="atlas of the heart book cover"
+        />
+        <li class="bookinventory__booklist__title">Atlas Of The Heart</li>
+        <li class="bookinventory__booklist__author">Brene Brown</li>
+        <li class="bookinventory__booklist__stock">In Stock</li>
+        <li class="bookinventory__booklist__price">$18.99</li>
+        <button class="bookinventory__booklist__garbage">🗑️</button>
+      </ul>
+
+      <form action="submit" class="bookinventory__addBook">
+        <input
+          class="bookinventory__addBook__input title"
+          type="text"
+          id="book-title"
+          placeholder="Title"
+        />
+        <input
+          class="bookinventory__addBook__input author"
+          type="text"
+          id="book-author"
+          placeholder="Author"
+        />
+        <input
+          class="bookinventory__addBook__input imageurl"
+          type="text"
+          id="book-url"
+          placeholder="Image URL"
+        />
+        <input
+          class="bookinventory__addBook__input price"
+          type="text"
+          id="book-price"
+          placeholder="Price"
+        />
+        <select
+          class="bookinventory__addBook__input stock"
+          name="stock"
+          id="stock-dropdown"
+        >
+          <option value="instock">In Stock</option>
+          <option value="outofstock">Out of Stock</option>
+        </select>
+        <button class="bookinventory__addBook__button">Add Book</button>
+      </form>
     </div>
-    <div class="booklist">
-        <ul class="booklist__items">
-            <li class="booklist__book">
-                <img class="booklist__image" src="assets/Atlasoftheheart.jpg" alt="atlas of the heart book cover">
-                <div class="booklist__details">
-                    <p class="booklist__book title">Atlas Of The Heart</p>
-                    <p class="booklist__book author">Brene Brown</p>
-                    <p class="booklist__book stock">In Stock</p>
-                    <p class="booklist__book price">$18.99</p>
-                </div>
-                <div class="booklist__actions">
-                    <p class="booklist__book garbage">🗑️</p>
-                </div>
-            </li>
-        </ul>
-    </div>    
-    <div class="addBook">
-        <form action="submit" class="addBook__form">
-           
-            <input class="addBook__input title" type="text" placeholder="Title">
-            <input class="addBook__input author" type="text" placeholder="Author">
-            <input class="addBook__input imageurl" type="text" placeholder="Image URL">
-            <input class="addBook__input price" type="text" placeholder="Price">
-            <select class="addBook__input stock" name="stock"  id="stock-dropdown">
-                <option value="instock">In Stock</option>
-                <option value="outofstock">Out of Stock</option></select>
-            <button class="addBook__button">Add Book</button>
-        </form>
-      
-    </div>
-</body>
+  </body>
 </html>

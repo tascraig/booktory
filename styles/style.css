@@ -1,68 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, html {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
   box-sizing: border-box;
   background-color: #F2EDE6;
   display: grid;
+}
+
+.bookinventory {
+  display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
   grid-template-areas: "sidebar booklist addBook";
   align-items: center;
 }
-
-.sidebar {
+.bookinventory__sidebar-text {
   text-align: center;
+  font-size: 30px;
+  align-items: center;
   justify-content: center;
-  padding: 20px;
   color: #0D054C;
   transform: rotate(-90deg);
   position: relative;
-  top: 50%;
   grid-area: sidebar;
 }
-
-.booklist {
+.bookinventory__booklist {
+  margin-left: 0;
   list-style-type: none;
   display: grid;
-  grid-gap: 20px;
   grid-template-columns: repeat(3, auto);
-  align-items: start;
+  grid-template-rows: 25px 25px 25px 25px;
   grid-area: booklist;
 }
-
-.booklist__book {
-  display: flex;
-  align-items: center;
-}
-
-.booklist__image {
+.bookinventory__booklist__image {
   width: 75px;
   height: 100px;
-  margin-right: 0;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  grid-gap: 2px;
 }
-
-.booklist__details {
-  margin-left: 15px;
+.bookinventory__booklist__items {
+  list-style-type: none;
+  display: grid;
 }
-
-.booklist__details p {
-  margin: 0;
+.bookinventory__booklist__title {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: #0D054C;
 }
-
-.booklist__garbage {
+.bookinventory__booklist__author {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 12px;
+}
+.bookinventory__booklist__stock {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  font-size: 10px;
+  background-color: green;
+  color: white;
+  width: fit-content;
+  border-radius: 25px;
+  padding: 5px 10px;
+  align-content: center;
+  justify-content: center;
+  margin-top: 0;
+}
+.bookinventory__booklist__price {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  color: #0D054C;
+  font-size: 16px;
+  font-weight: bolder;
+  padding-top: 10px;
+}
+.bookinventory__booklist__garbage {
+  grid-column: 3/4;
+  grid-row: 1/5;
+  font-size: 24px;
+  background-color: #F2EDE6;
+  border: none;
   cursor: pointer;
-  margin-right: 0;
+  align-content: center;
+  padding-right: 25px;
 }
-
-.addBook {
+.bookinventory__addBook {
   padding: 75px;
   grid-area: addBook;
   justify-content: center;
   position: relative;
-  top: 50%;
+  align-items: center;
+  border-left: 1px solid #0D054C;
 }
-.addBook__input {
+.bookinventory__addBook__input {
   border: none;
   height: 40px;
   width: 250px;
@@ -73,12 +112,12 @@ body, html {
   margin-right: auto;
   display: block;
 }
-.addBook__input::placeholder {
+.bookinventory__addBook__input::placeholder {
   padding-bottom: 4px;
   font-size: 12px;
   background-color: #F2EDE6;
 }
-.addBook__button {
+.bookinventory__addBook__button {
   margin-top: 20px;
   height: 40px;
   width: 200px;
@@ -89,6 +128,7 @@ body, html {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
