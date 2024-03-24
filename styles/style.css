@@ -130,5 +130,11 @@ body, html {
   display: block;
   cursor: pointer;
 }
+.bookinventory__addBook__error-messages {
+  grid-area: addBook;
+  padding: 20px;
+  color: red;
+  font-size: 14px;
+}
 
 /*# sourceMappingURL=style.css.map */

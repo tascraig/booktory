@@ -14,18 +14,25 @@
       </aside>
 
       <ul class="bookinventory__booklist">
-        <img
-          class="bookinventory__booklist__image"
-          src="assets/Atlasoftheheart.jpg"
-          alt="atlas of the heart book cover"
-        />
-        <li class="bookinventory__booklist__title">Atlas Of The Heart</li>
-        <li class="bookinventory__booklist__author">Brene Brown</li>
-        <li class="bookinventory__booklist__stock">In Stock</li>
-        <li class="bookinventory__booklist__price">$18.99</li>
-        <button class="bookinventory__booklist__garbage">🗑️</button>
+        <template id="template">
+          <img
+            class="bookinventory__booklist__image template-book"
+            src="assets/Atlasoftheheart.jpg"
+            alt="atlas of the heart book cover"
+          />
+          <li class="bookinventory__booklist__title template-book">
+            Atlas Of The Heart
+          </li>
+          <li class="bookinventory__booklist__author template-book">
+            Brene Brown
+          </li>
+          <li class="bookinventory__booklist__stock template-book">In Stock</li>
+          <li class="bookinventory__booklist__price template-book">$18.99</li>
+          <button class="bookinventory__booklist__garbage template-book">
+            🗑️
+          </button>
+        </template>
       </ul>
-
       <form action="submit" class="bookinventory__addBook">
         <input
           class="bookinventory__addBook__input title"
@@ -61,6 +68,8 @@
         </select>
         <button class="bookinventory__addBook__button">Add Book</button>
       </form>
+
+      <div class="bookinventory__error-messages"></div>
     </div>
   </body>
 </html>
