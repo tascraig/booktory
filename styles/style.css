@@ -18,8 +18,7 @@ body, html {
 
 .bookinventory {
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 2fr 2fr;
   grid-template-areas: "sidebar booklist addBook";
   align-items: center;
 }
@@ -132,6 +131,7 @@ body, html {
 }
 .bookinventory__addBook__error-messages {
   grid-area: addBook;
+  grid-column: 3/4;
   padding: 20px;
   color: red;
   font-size: 14px;

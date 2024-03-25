@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         const bookElement = generateBookElement(bookObj);
-        booksContainer.appendChild(bookElement);
+        // booksContainer.appendChild(bookElement);
         handleFormMessage(completionMessage, errorMessage);
         displayTemplate();
         addBookForm.reset();
@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleFormMessage(showMessage, hideMessage) {
         console.log('Handling Form Message');
         
-        aside.innerHTML = "";
-        aside.appendChild(showMessage);
+        // aside.innerHTML = "";
+        addBookForm.appendChild(showMessage);
         hideMessage.remove();
     }
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
         templateBooks.forEach(templateBook => {
             templateBook.style.display = "none";
         });
-    
+        
         
         booksContainer.insertBefore(bookElement, booksContainer.firstChild);
     
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
             const bookToRemove = trash.closest("li.books__book");
             bookToRemove.remove();
-            aside.appendChild(removeMessage);
+            addBookForm.appendChild(removeMessage);
             displayTemplate();
         });
         return trash;
