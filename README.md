@@ -17,7 +17,7 @@ The Book Inventory App is a web application designed to help users manage their 
 
 ## How to Use
 
-7. Use the app to manage your book inventory by adding, deleting or editing books.
+Use the app to manage your book inventory by adding, deleting or editing books.
 
 ## Contributing
 
